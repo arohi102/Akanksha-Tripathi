@@ -49,9 +49,7 @@ a {
   align-items: center;
   opacity: 0;
   animation: headerPopin 1s 3s ease-in forwards;
-}
-
-.nav-bar {
+  z-index: 99;
 }
 
 .nav-list {
@@ -71,7 +69,8 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* display: none; */
+  padding: 0 120px;
+  overflow: hidden;
 }
 
 /* info with hii, name, role and description */
@@ -81,6 +80,7 @@ a {
   text-transform: capitalize;
   transform: translateX(-50vw);
   animation: infoSwipeIn 2s 3s ease-in forwards;
+  width: 40%;
 }
 
 .info .hi {
@@ -127,6 +127,23 @@ a {
 .working-lady-img {
   transform: translateX(50vw);
   animation: imgSwipeIn 2s 3s ease-in forwards;
+  width: 50%;
+  height: inherit;
+}
+
+@media only screen and (max-device-width: 768px) {
+  .homepage-content {
+    flex-direction: column-reverse;
+  }
+  .desktop-only{
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-only{
+    display: none;
+  }
 }
 
 /* animation to reduce opacity of welcome text */
